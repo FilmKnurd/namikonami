@@ -344,7 +344,7 @@
 	  -moz-transition: all 0.05s;
 	  transition: all 0.05s;
 	}
-	#controllerOut #controllerInner .center .buttonBar .buttonBarInner ul li:hover {
+	#controllerOut #controllerInner .center .buttonBar .buttonBarInner ul li:active {
 	  -webkit-transition: all 0.05s;
 	  -moz-transition: all 0.05s;
 	  transition: all 0.05s;
@@ -405,7 +405,7 @@
 	  -moz-transition: all 0.1s;
 	  transition: all 0.1s;
 	}
-	#controllerOut #controllerInner .right .rightButtons li .circ:hover {
+	#controllerOut #controllerInner .right .rightButtons li .circ:active {
 	  box-shadow: 0 3px 5px 0 rgba(50, 50, 50, 0.66);
 	  -webkit-transition: all 0.1s;
 	  -moz-transition: all 0.1s;
@@ -421,10 +421,39 @@
 	  font-size: 0.895em;
 	  bottom: -18px;
 	}
+	.btn {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		z-index: 99999;
+	}
+	.btn:active {
+		border: 2px solid green;
+	}
+	.btn-top {
+	    left: 56px;
+	    top: 34px;
+	}
+	.btn-right {
+	    left: 88px;
+	    top: 67px;
+	}
+	.btn-bottom {
+    	bottom: 34px;
+		left: 56px;
+	}
+	.btn-left {
+		left: 23px;
+		top: 67px;
+	}
 </style>
 <div id="controllerOut">
   <div class="cable"></div>
   <div id="controllerInner">
+  	<div class="btn btn-top"></div>
+  	<div class="btn btn-right"></div>
+  	<div class="btn btn-bottom"></div>
+  	<div class="btn btn-left"></div>
     <div class="left">
       <div class="arrow">
         <div id="trs"></div>
